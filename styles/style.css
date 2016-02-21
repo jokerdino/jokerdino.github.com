@@ -1,0 +1,27 @@
+p {
+    color : red;
+}
+
+h1 {
+    margin-left:150px;
+}
+ label {
+    display:inline-block;
+    text-align: end;
+    width:210px;
+    line-height:30px;
+ }
+
+input {
+    margin-left:30px;
+}
+
+
+button {
+    text-align: center;
+   margin-left:180px;
+}
+
+select {
+    margin-left: 30px;
+}

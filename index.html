@@ -1,54 +1,78 @@
-<!DOCTYPE html>
 <html>
+    
+    <head>
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+        
+    
+    </head>
+<body>
+    
+    <h1> Loot Calculator</h1>
+    
+    <label>Attacker Townhall level</label>
 
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Jokerdino.github.com : Kids can kode. Really!" />
+    <select name= "Attacker" id="attacker">
+        <option value = "1"> 1</option>
+        <option value = "2"> 2</option>
+        <option value = "3"> 3</option>
+        <option value = "4"> 4</option>
+        <option value = "5"> 5</option>
+        <option value = "6"> 6</option>
+        <option value = "7"> 7</option>
+        <option value = "8"> 8</option>
+        <option value = "9"> 9</option>
+        <option value = "10"> 10</option>
+        <option value = "11"> 11</option>
+    </select>
+    <br>
+    <label>Defender Townhall level</label>
+    <select name = "Defender" id = "defender">
+        <option value = "1">1</option>
+        <option value = "2">2</option>
+        <option value = "3"> 3</option>
+        <option value = "4"> 4</option>
+        <option value = "5"> 5</option>
+        <option value = "6"> 6</option>
+        <option value = "7"> 7</option>
+        <option value = "8"> 8</option>
+        <option value = "9"> 9</option>
+        <option value = "10"> 10</option>
+        <option value = "11"> 11</option>
+    </select>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    
+    <br>
+    <label>Gold storage</label>
+    <input type="number" name = "goldstorage" id = "goldstorage">
+    <br>
+    <label> Elixir storage</label>
+    <input type="number" name = "elixirstorage" id = "elixirstorage">
+    <br>
+    <label>Dark Elixir storage</label>
+    <input type="number" name = "darkelixirstorage" id = "darkelixirstorage">
+    <br>
+    <label>Clan castle treasury</label>
+    <input type="number" name = "cc_treasury" id="cc_treasury">
+    <br>
+    <label>Clan castle treasury - Dark elixir</label>
+    <input type="number" name = "clancastledarkelixir" id="ccdark">
+                                                                   
+    <br>
+    
+    <br>
+    
+    <button>Calculate</button>
+    
+    <br>
+    <label> Gold available for loot:</label>
+    <p id="goldloot"></p>
+    <label> Elixir available for loot:</label>
+    <p id="elixirloot"></p>
+    <label> Dark Elixir available for loot:</label>
+    <p id="darkelixir"></p>
+    
+    <script src="scripts/main.js"></script>
+    
+    </body>
 
-    <title>Jokerdino.github.com</title>
-  </head>
-
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/jokerdino">View on GitHub</a>
-
-          <h1 id="project_title">Jokerdino.github.com</h1>
-          <h2 id="project_tagline">Kids can kode. Really!</h2>
-
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <p>Nothing to see here. Move on.</p>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-              <script type="text/javascript">
-            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-          </script>
-          <script type="text/javascript">
-            try {
-              var pageTracker = _gat._getTracker("<script type="text/javascript">    var _gaq = _gaq || [];   _gaq.push(['_setAccount', 'UA-33645926-1']);   _gaq.push(['_trackPageview']);    (function() {     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);   })();  </script>");
-            pageTracker._trackPageview();
-            } catch(err) {}
-          </script>
-
-
-  </body>
 </html>
