@@ -1,0 +1,62 @@
+#mainContent {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.field-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#allFields {
+    align-items: center;
+}
+
+#standardFields {
+    align-items: stretch;
+}
+
+.field-container > div {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.levels-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.field-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.field-group > label {
+    flex-grow: 1;
+    text-align: end;
+    margin-left: 30px;
+    margin-right: 20px;
+}
+
+.field-group > input, .field-group > select {
+    height: 24px;
+}
+
+.results-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: justify;
+}
+
+.result-item {
+    margin: 5px;
+}
+
+.result-output {
+    display: inline-block; /* required to allow setting width */
+    width: 3ch; /* ch = size of glyph '0' */
+    color: red;
+}

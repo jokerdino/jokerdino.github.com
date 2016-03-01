@@ -1,78 +1,66 @@
-<html>
-    
-    <head>
-    <link href="styles/style.css" rel="stylesheet" type="text/css">
-        
-    
-    </head>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Jokerdino's Calculator</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+
 <body>
-    
-    <h1> Loot Calculator</h1>
-    
-    <label>Attacker Townhall level</label>
+    <div id="mainContent">
+        <h1>Loot Calculator</h1>
+        <div id="allFields" class="field-container">
+            <div class="levels-container">
+                <div class="field-group">
+                    <label for="attacker">Attacker Townhall level</label>
+                    <select name="Attacker" id="attacker">
+                    </select>
+                </div>
+                <div class="field-group">
+                    <label for="defender">Defender Townhall level</label>
+                    <select name="Defender" id="defender">
+                    </select>
+                </div>
+            </div>
 
-    <select name= "Attacker" id="attacker">
-        <option value = "1"> 1</option>
-        <option value = "2"> 2</option>
-        <option value = "3"> 3</option>
-        <option value = "4"> 4</option>
-        <option value = "5"> 5</option>
-        <option value = "6"> 6</option>
-        <option value = "7"> 7</option>
-        <option value = "8"> 8</option>
-        <option value = "9"> 9</option>
-        <option value = "10"> 10</option>
-        <option value = "11"> 11</option>
-    </select>
-    <br>
-    <label>Defender Townhall level</label>
-    <select name = "Defender" id = "defender">
-        <option value = "1">1</option>
-        <option value = "2">2</option>
-        <option value = "3"> 3</option>
-        <option value = "4"> 4</option>
-        <option value = "5"> 5</option>
-        <option value = "6"> 6</option>
-        <option value = "7"> 7</option>
-        <option value = "8"> 8</option>
-        <option value = "9"> 9</option>
-        <option value = "10"> 10</option>
-        <option value = "11"> 11</option>
-    </select>
 
+            <div id="standardFields" class="field-container">
+                <div class="field-group">
+                    <label for="goldstorage">Gold storage</label>
+                    <input type="number" name="goldstorage" id="goldstorage">
+                </div>
+                <div class="field-group">
+                    <label for="elixirstorage">Elixir storage</label>
+                    <input type="number" name="elixirstorage" id="elixirstorage">
+                </div>
+                <div class="field-group">
+                    <label for="darkelixirstorage">Dark Elixir storage</label>
+                    <input type="number" name="darkelixirstorage" id="darkelixirstorage">
+                </div>
+                <div class="field-group">
+                    <label for="cc_treasury">Clan castle treasury</label>
+                    <input type="number" name="cc_treasury" id="cc_treasury">
+                </div>
+                <div class="field-group">
+                    <label for="cc_de">Clan castle treasury - Dark elixir</label>
+                    <input type="number" name="cc_de" id="cc_de">
+                </div>
+            </div>
+        </div>
+
+        <div id="calcButton">
+            <button>Calculate</button>
+        </div>
+
+        <div class="results-container">
+            <div class="result-item">Gold available for loot: <span id="goldloot" class="result-output"></span></div>
+            <div class="result-item">Elixir available for loot: <span id="elixirloot" class="result-output"></span></div>
+            <div class="result-item">Dark Elixir available for loot: <span id="darkelixir" class="result-output"></span></div>
+        </div>
+    </div>
     
-    <br>
-    <label>Gold storage</label>
-    <input type="number" name = "goldstorage" id = "goldstorage">
-    <br>
-    <label> Elixir storage</label>
-    <input type="number" name = "elixirstorage" id = "elixirstorage">
-    <br>
-    <label>Dark Elixir storage</label>
-    <input type="number" name = "darkelixirstorage" id = "darkelixirstorage">
-    <br>
-    <label>Clan castle treasury</label>
-    <input type="number" name = "cc_treasury" id="cc_treasury">
-    <br>
-    <label>Clan castle treasury - Dark elixir</label>
-    <input type="number" name = "clancastledarkelixir" id="ccdark">
-                                                                   
-    <br>
-    
-    <br>
-    
-    <button>Calculate</button>
-    
-    <br>
-    <label> Gold available for loot:</label>
-    <p id="goldloot"></p>
-    <label> Elixir available for loot:</label>
-    <p id="elixirloot"></p>
-    <label> Dark Elixir available for loot:</label>
-    <p id="darkelixir"></p>
-    
-    <script src="scripts/main.js"></script>
-    
-    </body>
+    <script src="script.js"></script>
+</body>
 
 </html>

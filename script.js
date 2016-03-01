@@ -1,3 +1,17 @@
+var generateLevelOptions = function(min, max, target) {
+    for (var i = min; i <= max; i++) {
+        var opt = document.createElement('option');
+        opt.value = i;
+        opt.textContent = i;
+        target.appendChild(opt);
+    }
+}
+['#attacker', '#defender'].forEach(function(sel) {
+    var node = document.querySelector(sel);
+    generateLevelOptions(1, 11, node);
+})
+
+
 //var myHeading = document.querySelector('h1');
 //myHeading.textContent = 'Hellwo World!';
 
@@ -22,6 +36,7 @@ var cc_mul = 0.03;
 var cc_loot;
 var loot_cap;
 var th_diff;
+var cc_de = document.getElementById('cc_de');
 
 //var attacker;
 //var defender;
@@ -30,9 +45,54 @@ var th_diff;
 //var defender = document.getElementById('defender');
 
 
+var cc_de_loot;
 
 var final_gold_loot;
 var final_elixir_loot;
+var final_dark_elixir_loot;
+
+function calculateDEloot() {
+
+    if ((defender.value) === '7') {
+        loot_cap = 1200;
+    } else if ((defender.value) === '8') {
+        loot_cap = 2000;
+    } else if ((defender.value) === '9') {
+        loot_cap = 2500;
+    } else if ((defender.value) === '10') {
+        loot_cap = 3000;
+    } else if ((defender.value) === '11') {
+        loot_cap = 3500;
+    }
+
+    if ((defender.value) === '11') {
+        loot_multi = 0.04;
+    } else if ((defender.value) === '10') {
+        loot_multi = 0.04;
+    } else if ((defender.value) === '9') {
+        loot_multi = 0.05;
+    } else if ((defender.value) === '8') {
+        loot_multi = 0.06;
+    } else if ((defender.value) === '7') {
+        loot_multi = 0.06;
+    }
+
+
+    darkelixirloot = darkelixirstorage.value * loot_multi;
+
+    cc_de_loot = cc_de.value * cc_mul;
+
+
+    if (darkelixirloot > loot_cap) {
+        final_dark_elixir_loot = loot_cap + cc_de_loot;
+
+    } else if (darkelixirloot < loot_cap) {
+        final_dark_elixir_loot = darkelixirloot + cc_de_loot;
+
+    }
+
+    document.getElementById("darkelixir").innerHTML = final_dark_elixir_loot;
+}
 
 function displayloot() {
 
@@ -100,7 +160,6 @@ function displayloot() {
     
     if (goldloot > loot_cap) {
         final_gold_loot = loot_cap + cc_loot;
-      //  window.alert(final_gold_loot);
     } else if (goldloot < loot_cap) {
         final_gold_loot = goldloot + cc_loot;
     }
@@ -108,7 +167,6 @@ function displayloot() {
         
     if (elixirloot > loot_cap) {
         final_elixir_loot = loot_cap + cc_loot;
-      //  window.alert(final_gold_loot);
     } else if (elixirloot < loot_cap) {
         final_elixir_loot = elixirloot + cc_loot;
     }
@@ -123,7 +181,6 @@ function displayloot() {
 myButton.onclick = function () {
 
     displayloot();
-    
-    
+    calculateDEloot();
 };
 
