@@ -1,15 +1,15 @@
-var generateLevelOptions = function(min, max, target) {
+var generateLevelOptions = function (min, max, target) {
     for (var i = min; i <= max; i++) {
         var opt = document.createElement('option');
         opt.value = i;
         opt.textContent = i;
         target.appendChild(opt);
     }
-}
+};
 ['#attacker', '#defender'].forEach(function(sel) {
     var node = document.querySelector(sel);
     generateLevelOptions(1, 11, node);
-})
+});
 
 
 //var myHeading = document.querySelector('h1');

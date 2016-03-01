@@ -57,6 +57,6 @@
 
 .result-output {
     display: inline-block; /* required to allow setting width */
-    width: 3ch; /* ch = size of glyph '0' */
+    min-width: 6ch; /* ch = size of glyph '0' */
     color: red;
 }
